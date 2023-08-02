@@ -13,9 +13,9 @@ type AppConfig struct{}
 
 func (ac *AppConfig) NewApp(version string) *cli.App {
 	app := cli.NewApp()
-	app.Name = "trivy-db"
+	app.Name = "vulcheck-db"
 	app.Version = version
-	app.Usage = "Trivy DB builder"
+	app.Usage = "Vulcheck DB builder"
 
 	app.Commands = []cli.Command{
 		{

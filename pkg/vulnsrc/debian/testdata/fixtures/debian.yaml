@@ -1,0 +1,11 @@
+- bucket: debian 10
+  pairs:
+    - bucket: alpine
+      pairs:
+        - key: CVE-2021-38370
+          value:
+            FixedVersion: ""
+            Status: 2
+        - key: CVE-2008-5514
+          value:
+            FixedVersion: "2.02-3.1"
