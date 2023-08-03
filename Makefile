@@ -1,0 +1,96 @@
+LDFLAGS=-ldflags "-s -w"
+
+GOPATH=$(shell go env GOPATH)
+GOBIN=$(GOPATH)/bin
+
+ifndef REPO_OWNER
+    REPO_OWNER=khulnasoft-labs
+endif
+
+u := $(if $(update),-u)
+
+$(GOBIN)/wire:
+	go install github.com/google/wire/cmd/wire@v0.5.0
+
+.PHONY: wire
+wire: $(GOBIN)/wire
+	wire gen ./...
+
+$(GOBIN)/mockery:
+	go install github.com/knqyf263/mockery/cmd/mockery@latest
+
+.PHONY: mock
+mock: $(GOBIN)/mockery
+	$(GOBIN)/mockery -all -inpkg -case=snake
+
+.PHONY: deps
+deps:
+	go get ${u} -d
+	go mod tidy
+
+$(GOBIN)/golangci-lint:
+	curl -sfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(GOBIN) v1.41.0
+
+.PHONY: test
+test:
+	go test -v -short -race -timeout 30s -coverprofile=coverage.txt -covermode=atomic ./...
+
+.PHONY: lint
+lint: $(GOBIN)/golangci-lint
+	$(GOBIN)/golangci-lint run
+
+.PHONY: build
+build:
+	go build $(LDFLAGS) ./cmd/vul-db
+
+.PHONY: clean
+clean:
+	rm -rf integration/testdata/fixtures/
+
+$(GOBIN)/bbolt:
+	go install go.etcd.io/bbolt/cmd/bbolt@v1.3.5
+
+vul-db:
+	make build
+
+.PHONY: db-all
+db-all:
+	make build db-fetch-langs db-fetch-vuln-list
+	make db-build
+	make db-compact
+	make db-compress
+
+.PHONY: db-fetch-langs
+db-fetch-langs:
+	mkdir -p cache/ruby-advisory-db cache/php-security-advisories cache/nodejs-security-wg
+	wget -qO - https://github.com/rubysec/ruby-advisory-db/archive/master.tar.gz | tar xz -C cache/ruby-advisory-db --strip-components=1
+	wget -qO - https://github.com/FriendsOfPHP/security-advisories/archive/master.tar.gz | tar xz -C cache/php-security-advisories --strip-components=1
+	wget -qO - https://github.com/nodejs/security-wg/archive/main.tar.gz | tar xz -C cache/nodejs-security-wg --strip-components=1
+
+.PHONY: db-build
+db-build: vul-db
+	./vul-db build --cache-dir cache --update-interval 6h
+
+.PHONY: db-compact
+db-compact: $(GOBIN)/bbolt cache/db/vul.db
+	mkdir -p assets/
+	$(GOBIN)/bbolt compact -o ./assets/vul.db cache/db/vul.db
+	cp cache/db/metadata.json ./assets/metadata.json
+	rm -rf cache/db
+
+.PHONY: db-compress
+db-compress: assets/vul.db assets/metadata.json
+	tar cvzf assets/db.tar.gz -C assets/ vul.db metadata.json
+
+.PHONY: db-clean
+db-clean:
+	rm -rf cache assets
+
+.PHONY: db-fetch-vuln-list
+db-fetch-vuln-list:
+	mkdir -p cache/vuln-list
+	wget -qO - https://github.com/$(REPO_OWNER)/vuln-list-reserve/archive/main.tar.gz | tar xz -C cache/vuln-list --strip-components=1
+	mkdir -p cache/vuln-list-redhat
+	wget -qO - https://github.com/$(REPO_OWNER)/vuln-list-redhat/archive/main.tar.gz | tar xz -C cache/vuln-list-redhat --strip-components=1
+	mkdir -p cache/vuln-list-debian
+	wget -qO - https://github.com/$(REPO_OWNER)/vuln-list-debian/archive/main.tar.gz | tar xz -C cache/vuln-list-debian --strip-components=1
