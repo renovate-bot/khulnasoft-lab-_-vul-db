@@ -4,11 +4,11 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/vulnsrctest"
+	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrctest"
 
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/utils"
+	"github.com/khulnasoft-labs/vul-db/pkg/utils"
 
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/types"
+	"github.com/khulnasoft-labs/vul-db/pkg/types"
 )
 
 func TestVulnSrc_Update(t *testing.T) {

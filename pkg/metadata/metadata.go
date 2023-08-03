@@ -8,7 +8,7 @@ import (
 
 	"golang.org/x/xerrors"
 
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/db"
+	"github.com/khulnasoft-labs/vul-db/pkg/db"
 )
 
 const metadataFile = "metadata.json"

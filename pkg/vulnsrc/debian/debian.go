@@ -13,11 +13,11 @@ import (
 	bolt "go.etcd.io/bbolt"
 	"golang.org/x/xerrors"
 
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/db"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/types"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/utils"
-	ustrings "github.com/khulnasoft-labs/vulcheck-db/pkg/utils/strings"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/vulnsrc/vulnerability"
+	"github.com/khulnasoft-labs/vul-db/pkg/db"
+	"github.com/khulnasoft-labs/vul-db/pkg/types"
+	"github.com/khulnasoft-labs/vul-db/pkg/utils"
+	ustrings "github.com/khulnasoft-labs/vul-db/pkg/utils/strings"
+	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrc/vulnerability"
 )
 
 const (
@@ -449,7 +449,7 @@ func (vs VulnSrc) putAdvisory(tx *bolt.Tx, bkt bucket, advisory Advisory) error 
 	return nil
 }
 
-// defaultPut puts the advisory into Vulcheck DB, but it can be overwritten.
+// defaultPut puts the advisory into Vul DB, but it can be overwritten.
 func defaultPut(dbc db.Operation, tx *bolt.Tx, advisory interface{}) error {
 	adv, ok := advisory.(Advisory)
 	if !ok {

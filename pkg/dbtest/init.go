@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	fixtures "github.com/khulnasoft-labs/boltdb-fixtures"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/db"
+	"github.com/khulnasoft-labs/vul-db/pkg/db"
 	"github.com/stretchr/testify/require"
 )
 

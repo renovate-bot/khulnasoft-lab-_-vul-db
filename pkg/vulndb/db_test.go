@@ -14,13 +14,13 @@ import (
 	"k8s.io/utils/clock"
 	fake "k8s.io/utils/clock/testing"
 
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/db"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/dbtest"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/metadata"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/types"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/vulndb"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/vulnsrc"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/vulnsrc/vulnerability"
+	"github.com/khulnasoft-labs/vul-db/pkg/db"
+	"github.com/khulnasoft-labs/vul-db/pkg/dbtest"
+	"github.com/khulnasoft-labs/vul-db/pkg/metadata"
+	"github.com/khulnasoft-labs/vul-db/pkg/types"
+	"github.com/khulnasoft-labs/vul-db/pkg/vulndb"
+	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrc"
+	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrc/vulnerability"
 )
 
 type fakeVulnSrc struct{}
@@ -34,7 +34,7 @@ func (f fakeVulnSrc) Update(dir string) error {
 	return nil
 }
 
-func TestVulcheckDB_Insert(t *testing.T) {
+func TestVulDB_Insert(t *testing.T) {
 	type fields struct {
 		cacheDir string
 		clock    clock.Clock
@@ -120,7 +120,7 @@ func TestVulcheckDB_Insert(t *testing.T) {
 	}
 }
 
-func TestVulcheckDB_Build(t *testing.T) {
+func TestVulDB_Build(t *testing.T) {
 	modified := time.Date(2020, 8, 24, 17, 37, 0, 0, time.UTC)
 	published := time.Date(2019, 4, 7, 0, 29, 0, 0, time.UTC)
 

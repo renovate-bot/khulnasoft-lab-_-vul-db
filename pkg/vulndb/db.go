@@ -8,18 +8,18 @@ import (
 	"golang.org/x/xerrors"
 	"k8s.io/utils/clock"
 
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/db"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/metadata"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/types"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/vulnsrc"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/vulnsrc/vulnerability"
+	"github.com/khulnasoft-labs/vul-db/pkg/db"
+	"github.com/khulnasoft-labs/vul-db/pkg/metadata"
+	"github.com/khulnasoft-labs/vul-db/pkg/types"
+	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrc"
+	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrc/vulnerability"
 )
 
 type VulnDB interface {
 	Build(targets []string) error
 }
 
-type VulcheckDB struct {
+type VulDB struct {
 	dbc            db.Config
 	metadata       metadata.Client
 	vulnClient     vulnerability.Vulnerability
@@ -29,21 +29,21 @@ type VulcheckDB struct {
 	clock          clock.Clock
 }
 
-type Option func(*VulcheckDB)
+type Option func(*VulDB)
 
 func WithClock(clock clock.Clock) Option {
-	return func(core *VulcheckDB) {
+	return func(core *VulDB) {
 		core.clock = clock
 	}
 }
 
 func WithVulnSrcs(srcs map[types.SourceID]vulnsrc.VulnSrc) Option {
-	return func(core *VulcheckDB) {
+	return func(core *VulDB) {
 		core.vulnSrcs = srcs
 	}
 }
 
-func New(cacheDir string, updateInterval time.Duration, opts ...Option) *VulcheckDB {
+func New(cacheDir string, updateInterval time.Duration, opts ...Option) *VulDB {
 	// Initialize map
 	vulnSrcs := map[types.SourceID]vulnsrc.VulnSrc{}
 	for _, v := range vulnsrc.All {
@@ -51,7 +51,7 @@ func New(cacheDir string, updateInterval time.Duration, opts ...Option) *Vulchec
 	}
 
 	dbc := db.Config{}
-	tdb := &VulcheckDB{
+	tdb := &VulDB{
 		dbc:            dbc,
 		metadata:       metadata.NewClient(cacheDir),
 		vulnClient:     vulnerability.New(dbc),
@@ -68,7 +68,7 @@ func New(cacheDir string, updateInterval time.Duration, opts ...Option) *Vulchec
 	return tdb
 }
 
-func (t VulcheckDB) Insert(targets []string) error {
+func (t VulDB) Insert(targets []string) error {
 	log.Println("Updating vulnerability database...")
 	for _, target := range targets {
 		src, ok := t.vulnSrc(target)
@@ -95,7 +95,7 @@ func (t VulcheckDB) Insert(targets []string) error {
 	return nil
 }
 
-func (t VulcheckDB) Build(targets []string) error {
+func (t VulDB) Build(targets []string) error {
 	// Insert all security advisories
 	if err := t.Insert(targets); err != nil {
 		return xerrors.Errorf("insert error: %w", err)
@@ -114,7 +114,7 @@ func (t VulcheckDB) Build(targets []string) error {
 	return nil
 }
 
-func (t VulcheckDB) vulnSrc(target string) (vulnsrc.VulnSrc, bool) {
+func (t VulDB) vulnSrc(target string) (vulnsrc.VulnSrc, bool) {
 	for _, src := range t.vulnSrcs {
 		if target == string(src.Name()) {
 			return src, true
@@ -123,9 +123,9 @@ func (t VulcheckDB) vulnSrc(target string) (vulnsrc.VulnSrc, bool) {
 	return nil, false
 }
 
-func (t VulcheckDB) optimize() error {
+func (t VulDB) optimize() error {
 	// NVD also contains many vulnerabilities that are not related to OS packages or language-specific packages.
-	// Vulcheck DB will not store them so that it could reduce the database size.
+	// Vul DB will not store them so that it could reduce the database size.
 	// This bucket has only vulnerability IDs provided by vendors. They must be stored.
 	err := t.dbc.ForEachVulnerabilityID(func(tx *bolt.Tx, cveID string) error {
 		details := t.vulnClient.GetDetails(cveID)
@@ -156,7 +156,7 @@ func (t VulcheckDB) optimize() error {
 	return nil
 }
 
-func (t VulcheckDB) cleanup() error {
+func (t VulDB) cleanup() error {
 	if err := t.dbc.DeleteVulnerabilityIDBucket(); err != nil {
 		return xerrors.Errorf("failed to delete severity bucket: %w", err)
 	}

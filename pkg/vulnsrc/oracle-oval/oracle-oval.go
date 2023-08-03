@@ -12,11 +12,11 @@ import (
 	bolt "go.etcd.io/bbolt"
 	"golang.org/x/xerrors"
 
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/db"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/types"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/utils"
-	ustrings "github.com/khulnasoft-labs/vulcheck-db/pkg/utils/strings"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/vulnsrc/vulnerability"
+	"github.com/khulnasoft-labs/vul-db/pkg/db"
+	"github.com/khulnasoft-labs/vul-db/pkg/types"
+	"github.com/khulnasoft-labs/vul-db/pkg/utils"
+	ustrings "github.com/khulnasoft-labs/vul-db/pkg/utils/strings"
+	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrc/vulnerability"
 )
 
 var (
@@ -36,7 +36,7 @@ type PutInput struct {
 	VulnID     string                             // CVE-ID or ELSA-ID
 	Vuln       types.VulnerabilityDetail          // vulnerability detail such as CVSS and description
 	Advisories map[AffectedPackage]types.Advisory // pkg => advisory
-	OVAL       OracleOVAL                         // for extensibility, not used in vulcheck-db
+	OVAL       OracleOVAL                         // for extensibility, not used in vul-db
 }
 
 type DB interface {
@@ -46,7 +46,7 @@ type DB interface {
 }
 
 type VulnSrc struct {
-	DB // Those who want to customize Vulcheck DB can override put/get methods.
+	DB // Those who want to customize Vul DB can override put/get methods.
 }
 
 type Oracle struct {
@@ -77,7 +77,7 @@ func (vs *VulnSrc) Update(dir string) error {
 }
 
 // Parse parses all the advisories from Alma Linux.
-// It is exported for those who want to customize vulcheck-db.
+// It is exported for those who want to customize vul-db.
 func (vs *VulnSrc) parse(rootDir string) ([]OracleOVAL, error) {
 	var ovals []OracleOVAL
 	err := utils.FileWalk(rootDir, func(r io.Reader, path string) error {

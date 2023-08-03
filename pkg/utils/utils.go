@@ -11,7 +11,7 @@ func CacheDir() string {
 	if err != nil {
 		tmpDir = os.TempDir()
 	}
-	return filepath.Join(tmpDir, "vulcheck-db")
+	return filepath.Join(tmpDir, "vul-db")
 }
 
 func ConstructVersion(epoch, version, release string) string {

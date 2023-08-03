@@ -5,7 +5,7 @@ import (
 	"io"
 	"path/filepath"
 
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/utils"
+	"github.com/khulnasoft-labs/vul-db/pkg/utils"
 
 	"golang.org/x/xerrors"
 )

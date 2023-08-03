@@ -5,13 +5,13 @@ import (
 
 	bolt "go.etcd.io/bbolt"
 
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/types"
+	"github.com/khulnasoft-labs/vul-db/pkg/types"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/db"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/dbtest"
+	"github.com/khulnasoft-labs/vul-db/pkg/db"
+	"github.com/khulnasoft-labs/vul-db/pkg/dbtest"
 )
 
 func TestConfig_SaveAdvisoryDetails(t *testing.T) {

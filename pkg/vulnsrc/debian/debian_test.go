@@ -4,10 +4,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/types"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/vulnsrc/debian"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/vulnsrc/vulnerability"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/vulnsrctest"
+	"github.com/khulnasoft-labs/vul-db/pkg/types"
+	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrc/debian"
+	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrc/vulnerability"
+	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrctest"
 )
 
 func TestVulnSrc_Update(t *testing.T) {

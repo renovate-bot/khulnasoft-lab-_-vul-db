@@ -7,9 +7,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/db"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/dbtest"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/types"
+	"github.com/khulnasoft-labs/vul-db/pkg/db"
+	"github.com/khulnasoft-labs/vul-db/pkg/dbtest"
+	"github.com/khulnasoft-labs/vul-db/pkg/types"
 )
 
 func TestConfig_ForEachAdvisory(t *testing.T) {

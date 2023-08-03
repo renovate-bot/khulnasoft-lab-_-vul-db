@@ -17,5 +17,5 @@ coverage.txt
 assets
 cache
 
-# vulcheck-db Outputs
-vulcheck-db
+# vul-db Outputs
+vul-db
