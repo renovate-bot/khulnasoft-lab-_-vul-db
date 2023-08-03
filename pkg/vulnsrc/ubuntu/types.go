@@ -6,7 +6,7 @@ type UbuntuCVE struct {
 	Priority    string
 	Patches     map[PackageName]Patch
 	References  []string
-	PublicDate  string // for extensibility, not used in vulcheck-db
+	PublicDate  string // for extensibility, not used in vul-db
 }
 
 type PackageName string

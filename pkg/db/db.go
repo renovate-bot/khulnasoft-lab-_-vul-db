@@ -11,8 +11,8 @@ import (
 	bolt "go.etcd.io/bbolt"
 	"golang.org/x/xerrors"
 
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/log"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/types"
+	"github.com/khulnasoft-labs/vul-db/pkg/log"
+	"github.com/khulnasoft-labs/vul-db/pkg/types"
 )
 
 type CustomPut func(dbc Operation, tx *bolt.Tx, adv interface{}) error
@@ -90,7 +90,7 @@ func Dir(cacheDir string) string {
 }
 
 func Path(cacheDir string) string {
-	dbPath := filepath.Join(Dir(cacheDir), "vulcheck.db")
+	dbPath := filepath.Join(Dir(cacheDir), "vul.db")
 	return dbPath
 }
 

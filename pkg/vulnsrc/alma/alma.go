@@ -11,10 +11,10 @@ import (
 	bolt "go.etcd.io/bbolt"
 	"golang.org/x/xerrors"
 
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/db"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/types"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/utils"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/vulnsrc/vulnerability"
+	"github.com/khulnasoft-labs/vul-db/pkg/db"
+	"github.com/khulnasoft-labs/vul-db/pkg/types"
+	"github.com/khulnasoft-labs/vul-db/pkg/utils"
+	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrc/vulnerability"
 	version "github.com/knqyf263/go-rpm-version"
 )
 
@@ -37,7 +37,7 @@ type PutInput struct {
 	CveID        string
 	Vuln         types.VulnerabilityDetail
 	Advisories   map[string]types.Advisory
-	Erratum      Erratum // for extensibility, not used in vulcheck-db
+	Erratum      Erratum // for extensibility, not used in vul-db
 }
 
 type DB interface {
@@ -47,7 +47,7 @@ type DB interface {
 }
 
 type VulnSrc struct {
-	DB // Those who want to customize Vulcheck DB can override put/get methods.
+	DB // Those who want to customize Vul DB can override put/get methods.
 }
 
 // Alma implements the DB interface

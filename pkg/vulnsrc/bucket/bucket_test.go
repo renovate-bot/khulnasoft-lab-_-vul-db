@@ -3,7 +3,7 @@ package bucket_test
 import (
 	"testing"
 
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/vulnsrc/bucket"
+	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrc/bucket"
 	"github.com/stretchr/testify/assert"
 )
 

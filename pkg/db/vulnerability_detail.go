@@ -3,7 +3,7 @@ package db
 import (
 	"encoding/json"
 
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/types"
+	"github.com/khulnasoft-labs/vul-db/pkg/types"
 
 	bolt "go.etcd.io/bbolt"
 	"golang.org/x/xerrors"

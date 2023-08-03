@@ -12,11 +12,11 @@ import (
 	bolt "go.etcd.io/bbolt"
 	"golang.org/x/xerrors"
 
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/db"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/types"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/utils"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/vulnsrc/bucket"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/vulnsrc/vulnerability"
+	"github.com/khulnasoft-labs/vul-db/pkg/db"
+	"github.com/khulnasoft-labs/vul-db/pkg/types"
+	"github.com/khulnasoft-labs/vul-db/pkg/utils"
+	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrc/bucket"
+	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrc/vulnerability"
 )
 
 const (

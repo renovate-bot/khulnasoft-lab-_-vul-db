@@ -3,7 +3,7 @@ package strings_test
 import (
 	"testing"
 
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/utils/strings"
+	"github.com/khulnasoft-labs/vul-db/pkg/utils/strings"
 
 	"github.com/stretchr/testify/assert"
 )

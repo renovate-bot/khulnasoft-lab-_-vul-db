@@ -14,11 +14,11 @@ import (
 	"golang.org/x/exp/slices"
 	"golang.org/x/xerrors"
 
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/db"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/types"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/utils"
-	ustrings "github.com/khulnasoft-labs/vulcheck-db/pkg/utils/strings"
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/vulnsrc/vulnerability"
+	"github.com/khulnasoft-labs/vul-db/pkg/db"
+	"github.com/khulnasoft-labs/vul-db/pkg/types"
+	"github.com/khulnasoft-labs/vul-db/pkg/utils"
+	ustrings "github.com/khulnasoft-labs/vul-db/pkg/utils/strings"
+	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrc/vulnerability"
 )
 
 const (
@@ -48,7 +48,7 @@ type PutInput struct {
 	CveID        string
 	Vuln         types.VulnerabilityDetail
 	Advisories   map[string]types.Advisories // pkg name => advisory
-	Erratum      RLSA                        // for extensibility, not used in vulcheck-db
+	Erratum      RLSA                        // for extensibility, not used in vul-db
 }
 
 type DB interface {
@@ -89,7 +89,7 @@ func (vs *VulnSrc) Update(dir string) error {
 }
 
 // parse parses all the advisories from Rocky Linux.
-// It is exported for those who want to customize vulcheck-db.
+// It is exported for those who want to customize vul-db.
 func (vs *VulnSrc) parse(rootDir string) (map[string][]RLSA, error) {
 	errata := map[string][]RLSA{}
 	err := utils.FileWalk(rootDir, func(r io.Reader, path string) error {
@@ -196,7 +196,7 @@ func (vs *VulnSrc) commit(tx *bolt.Tx, platformName string, errata []RLSA) error
 				} else {
 					input.Advisories[pkg.Name] = types.Advisories{
 						// will save `0.0.0` version for non-`x86_64` arch
-						// to avoid false positives when using old Vulcheck with new database
+						// to avoid false positives when using old Vul with new database
 						FixedVersion: fixedVersion("0.0.0", entry.FixedVersion, pkg.Arch), // For backward compatibility
 						Entries:      []types.Advisory{entry},
 					}
@@ -272,7 +272,7 @@ func (r *Rocky) Get(release, pkgName, arch string) ([]types.Advisory, error) {
 		}
 
 		// For backward compatibility
-		// The old vulcheck-db has no entries, but has fixed versions only.
+		// The old vul-db has no entries, but has fixed versions only.
 		if len(adv.Entries) == 0 {
 			advisories = append(advisories, types.Advisory{
 				VulnerabilityID: vulnID,
