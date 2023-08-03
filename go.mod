@@ -1,4 +1,4 @@
-module github.com/khulnasoft-labs/vulcheck-db
+module github.com/khulnasoft-labs/vul-db
 
 go 1.19
 
