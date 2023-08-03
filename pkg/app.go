@@ -3,9 +3,9 @@ package pkg
 import (
 	"time"
 
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/utils"
+	"github.com/khulnasoft-labs/vul-db/pkg/utils"
 
-	"github.com/khulnasoft-labs/vulcheck-db/pkg/vulnsrc"
+	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrc"
 	"github.com/urfave/cli"
 )
 
@@ -13,9 +13,9 @@ type AppConfig struct{}
 
 func (ac *AppConfig) NewApp(version string) *cli.App {
 	app := cli.NewApp()
-	app.Name = "vulcheck-db"
+	app.Name = "vul-db"
 	app.Version = version
-	app.Usage = "Vulcheck DB builder"
+	app.Usage = "vul DB builder"
 
 	app.Commands = []cli.Command{
 		{
