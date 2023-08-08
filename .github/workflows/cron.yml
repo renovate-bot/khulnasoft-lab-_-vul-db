@@ -1,0 +1,67 @@
+---
+name: Vul DB
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+env:
+  REPO_OWNER: ${{ github.repository_owner }} # used in 'make db-build'
+  GH_USER: aqua-bot
+  VERSION: 2
+jobs:
+  build:
+    name: Build DB
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version-file: go.mod
+
+      - name: Install bbolt
+        run: go install go.etcd.io/bbolt/cmd/bbolt@v1.3.5
+
+
+      - name: Download vuln-list and advisories
+        run: make db-fetch-langs db-fetch-vuln-list
+
+      - name: Build the binary
+        run: make build
+
+      - name: Build database
+        run: make db-build
+
+      - name: Compact DB
+        run: make db-compact
+
+      - name: Compress assets
+        run: make db-compress
+
+      - name: Move DB
+        run: mv assets/db.tar.gz .
+
+      - name: Login to GitHub Packages Container registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ env.GH_USER }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install oras
+        run: |
+          # upgrade to ORAS 1.0.0
+          curl -LO https://github.com/oras-project/oras/releases/download/v1.0.0/oras_1.0.0_linux_amd64.tar.gz
+          tar -xvf ./oras_1.0.0_linux_amd64.tar.gz
+
+      - name: Upload assets to GHCR
+        run: |
+          ./oras version
+          tags=(latest ${{ env.VERSION }})
+          for tag in ${tags[@]}; do
+            ./oras push --artifact-type application/vnd.khulnasoft.vul.config.v1+json \
+              ghcr.io/${{ github.repository }}:${tag} \
+              db.tar.gz:application/vnd.khulnasoft.vul.db.layer.v1.tar+gzip
+          done
