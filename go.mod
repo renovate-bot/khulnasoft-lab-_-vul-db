@@ -11,6 +11,7 @@ require (
 	github.com/samber/lo v1.38.1
 	github.com/stretchr/testify v1.8.4
 	github.com/urfave/cli v1.22.14
+	github.com/urfave/cli/v2 v2.25.7
 	go.etcd.io/bbolt v1.3.7
 	go.uber.org/zap v1.24.0
 	golang.org/x/exp v0.0.0-20230811145659-89c5cff77bcb
