@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	fixtures "github.com/khulnasoft-labs/boltdb-fixtures"
-	"github.com/khulnasoft-labs/vul-db/pkg/db"
+	fixtures "github.com/khulnasoft-lab/boltdb-fixtures"
+	"github.com/khulnasoft-lab/vul-db/pkg/db"
 	"github.com/stretchr/testify/require"
 )
 

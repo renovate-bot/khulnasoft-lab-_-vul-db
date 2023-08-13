@@ -3,7 +3,7 @@ package ints_test
 import (
 	"testing"
 
-	"github.com/khulnasoft-labs/vul-db/pkg/utils/ints"
+	"github.com/khulnasoft-lab/vul-db/pkg/utils/ints"
 
 	"github.com/stretchr/testify/assert"
 )

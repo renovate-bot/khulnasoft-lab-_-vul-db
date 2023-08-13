@@ -1,11 +1,12 @@
-module github.com/khulnasoft-labs/vul-db
+module github.com/khulnasoft-lab/vul-db
 
 go 1.19
 
 require (
 	github.com/briandowns/spinner v1.23.0
 	github.com/hashicorp/go-version v1.6.0
-	github.com/khulnasoft-labs/boltdb-fixtures v0.0.0-20230802024017-3c3ec93cba21
+	github.com/khulnasoft-lab/boltdb-fixtures v0.0.0-20230813200610-ae47ede4f159
+	github.com/khulnasoft-labs/vul-db v0.0.0-20230813190315-d839f5532f51
 	github.com/knqyf263/go-deb-version v0.0.0-20230223133812-3ed183d23422
 	github.com/knqyf263/go-rpm-version v0.0.0-20220614171824-631e686d1075
 	github.com/samber/lo v1.38.1

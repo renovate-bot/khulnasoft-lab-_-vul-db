@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/khulnasoft-labs/vul-db/pkg/types"
-	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrc/vulnerability"
+	"github.com/khulnasoft-lab/vul-db/pkg/types"
+	"github.com/khulnasoft-lab/vul-db/pkg/vulnsrc/vulnerability"
 )
 
 const separator = "::"

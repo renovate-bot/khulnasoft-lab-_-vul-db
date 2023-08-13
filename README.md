@@ -1,22 +1,22 @@
 # vul-db 
 
-![Build DB](https://github.com/khulnasoft-labs/vul-db/workflows/Vul%20DB/badge.svg)
+![Build DB](https://github.com/khulnasoft-lab/vul-db/workflows/Vul%20DB/badge.svg)
 [![GitHub Release][release-img]][release]
 ![Downloads][download]
 [![Go Report Card][report-card-img]][report-card]
 [![Go Doc][go-doc-img]][go-doc]
 [![License][license-img]][license]
 
-[download]: https://img.shields.io/github/downloads/khulnasoft-labs/vul-db/total?logo=github
-[release-img]: https://img.shields.io/github/release/khulnasoft-labs/vul-db.svg?logo=github
-[release]: https://github.com/khulnasoft-labs/vul-db/releases
-[report-card-img]: https://goreportcard.com/badge/github.com/khulnasoft-labs/vul-db
-[report-card]: https://goreportcard.com/report/github.com/khulnasoft-labs/vul-db
-[go-doc-img]: https://godoc.org/github.com/khulnasoft-labs/vul-db?status.svg
-[go-doc]: https://godoc.org/github.com/khulnasoft-labs/vul-db
-[code-cov]: https://codecov.io/gh/khulnasoft-labs/vul-db/branch/main/graph/badge.svg
+[download]: https://img.shields.io/github/downloads/khulnasoft-lab/vul-db/total?logo=github
+[release-img]: https://img.shields.io/github/release/khulnasoft-lab/vul-db.svg?logo=github
+[release]: https://github.com/khulnasoft-lab/vul-db/releases
+[report-card-img]: https://goreportcard.com/badge/github.com/khulnasoft-lab/vul-db
+[report-card]: https://goreportcard.com/report/github.com/khulnasoft-lab/vul-db
+[go-doc-img]: https://godoc.org/github.com/khulnasoft-lab/vul-db?status.svg
+[go-doc]: https://godoc.org/github.com/khulnasoft-lab/vul-db
+[code-cov]: https://codecov.io/gh/khulnasoft-lab/vul-db/branch/main/graph/badge.svg
 [license-img]: https://img.shields.io/badge/License-Apache%202.0-blue.svg
-[license]: https://github.com/khulnasoft-labs/vul-db/blob/main/LICENSE
+[license]: https://github.com/khulnasoft-lab/vul-db/blob/main/LICENSE
 
 ## Overview
 `vul-db` is a CLI tool and a library to manipulate Vul DB.
@@ -62,13 +62,13 @@ Every 6 hours
 ### version 1 (deprecated)
 Vul DB v1 reached the end of support on February 2023. Please upgrade Vul to v0.23.0 or later.
 
-Read more about the Vul DB v1 deprecation in [the discussion](https://github.com/khulnasoft-labs/vul/discussions/1653).
+Read more about the Vul DB v1 deprecation in [the discussion](https://github.com/khulnasoft-lab/vul/discussions/1653).
 
 ### version 2
-Vul DB v2 is hosted on [GHCR](https://github.com/orgs/khulnasoft-labs/packages/container/package/vul-db).
+Vul DB v2 is hosted on [GHCR](https://github.com/orgs/khulnasoft-lab/packages/container/package/vul-db).
 Although GitHub displays the `docker pull` command by default, please note that it cannot be downloaded using `docker pull` as it is not a container image.
 
-You can download the actual compiled database via [Vul](https://khulnasoft-labs.github.io/vul/) or [Oras CLI](https://oras.land/cli/).
+You can download the actual compiled database via [Vul](https://khulnasoft-lab.github.io/vul/) or [Oras CLI](https://oras.land/cli/).
 
 Vul:
 ```sh
@@ -79,11 +79,11 @@ rm -rf $VUL_TEMP_DIR
 ```
 oras >= v0.13.0:
 ```sh
-$ oras pull ghcr.io/khulnasoft-labs/vul-db:2
+$ oras pull ghcr.io/khulnasoft-lab/vul-db:2
 ```
 
 oras < v0.13.0:
 ```sh
-$ oras pull -a ghcr.io/khulnasoft-labs/vul-db:2
+$ oras pull -a ghcr.io/khulnasoft-lab/vul-db:2
 ```
-The database can be used for [Air-Gapped Environment](https://khulnasoft-labs.github.io/vul/latest/docs/advanced/air-gap/).
+The database can be used for [Air-Gapped Environment](https://khulnasoft-lab.github.io/vul/latest/docs/advanced/air-gap/).

@@ -6,17 +6,17 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrctest"
+	"github.com/khulnasoft-lab/vul-db/pkg/vulnsrctest"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/khulnasoft-labs/vul-db/pkg/db"
-	"github.com/khulnasoft-labs/vul-db/pkg/dbtest"
-	"github.com/khulnasoft-labs/vul-db/pkg/types"
-	"github.com/khulnasoft-labs/vul-db/pkg/utils"
-	redhat "github.com/khulnasoft-labs/vul-db/pkg/vulnsrc/redhat-oval"
-	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrc/vulnerability"
+	"github.com/khulnasoft-lab/vul-db/pkg/db"
+	"github.com/khulnasoft-lab/vul-db/pkg/dbtest"
+	"github.com/khulnasoft-lab/vul-db/pkg/types"
+	"github.com/khulnasoft-lab/vul-db/pkg/utils"
+	redhat "github.com/khulnasoft-lab/vul-db/pkg/vulnsrc/redhat-oval"
+	"github.com/khulnasoft-lab/vul-db/pkg/vulnsrc/vulnerability"
 )
 
 func TestMain(m *testing.M) {

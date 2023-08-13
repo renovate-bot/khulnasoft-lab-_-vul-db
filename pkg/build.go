@@ -4,8 +4,8 @@ import (
 	"github.com/urfave/cli"
 	"golang.org/x/xerrors"
 
-	"github.com/khulnasoft-labs/vul-db/pkg/db"
-	"github.com/khulnasoft-labs/vul-db/pkg/vulndb"
+	"github.com/khulnasoft-lab/vul-db/pkg/db"
+	"github.com/khulnasoft-lab/vul-db/pkg/vulndb"
 )
 
 func build(c *cli.Context) error {
