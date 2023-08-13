@@ -20,11 +20,12 @@ require (
 	k8s.io/utils v0.0.0-20201110183641-67b214c5f920
 )
 
+require github.com/khulnasoft-lab/boltdb-fixtures v0.0.0-20230813205104-e4a570bb12b7
+
 require (
 	github.com/cpuguy83/go-md2man/v2 v2.0.2 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/goccy/go-yaml v1.11.0 // indirect
-	github.com/khulnasoft-lab/boltdb-fixtures v0.0.0-20230813205104-e4a570bb12b7 // indirect
 	github.com/kr/text v0.2.0 // indirect
 	github.com/mattn/go-colorable v0.1.8 // indirect
 	github.com/mattn/go-isatty v0.0.12 // indirect
