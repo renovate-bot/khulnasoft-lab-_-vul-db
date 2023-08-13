@@ -15,7 +15,7 @@ func (ac *AppConfig) NewApp(version string) *cli.App {
 	app := cli.NewApp()
 	app.Name = "vul-db"
 	app.Version = version
-	app.Usage = "vul DB builder"
+	app.Usage = "Vul DB builder"
 
 	app.Commands = []cli.Command{
 		{
