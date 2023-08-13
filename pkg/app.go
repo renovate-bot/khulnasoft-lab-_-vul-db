@@ -3,9 +3,9 @@ package pkg
 import (
 	"time"
 
-	"github.com/khulnasoft-labs/vul-db/pkg/utils"
+	"github.com/khulnasoft-lab/vul-db/pkg/utils"
 
-	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrc"
+	"github.com/khulnasoft-lab/vul-db/pkg/vulnsrc"
 	"github.com/urfave/cli"
 )
 

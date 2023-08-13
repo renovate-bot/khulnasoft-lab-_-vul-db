@@ -10,10 +10,10 @@ import (
 	"golang.org/x/xerrors"
 	"gopkg.in/yaml.v2"
 
-	"github.com/khulnasoft-labs/vul-db/pkg/db"
-	"github.com/khulnasoft-labs/vul-db/pkg/types"
-	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrc/bucket"
-	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrc/vulnerability"
+	"github.com/khulnasoft-lab/vul-db/pkg/db"
+	"github.com/khulnasoft-lab/vul-db/pkg/types"
+	"github.com/khulnasoft-lab/vul-db/pkg/vulnsrc/bucket"
+	"github.com/khulnasoft-lab/vul-db/pkg/vulnsrc/vulnerability"
 )
 
 const bundlerDir = "ruby-advisory-db"

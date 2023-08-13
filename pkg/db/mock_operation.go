@@ -3,7 +3,7 @@
 package db
 
 import (
-	types "github.com/khulnasoft-labs/vul-db/pkg/types"
+	types "github.com/khulnasoft-lab/vul-db/pkg/types"
 	mock "github.com/stretchr/testify/mock"
 	bbolt "go.etcd.io/bbolt"
 )

@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/khulnasoft-labs/vul-db/pkg/db"
+	"github.com/khulnasoft-lab/vul-db/pkg/db"
 	"github.com/stretchr/testify/require"
 )
 

@@ -7,11 +7,11 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/khulnasoft-labs/vul-db/pkg/db"
-	"github.com/khulnasoft-labs/vul-db/pkg/types"
-	"github.com/khulnasoft-labs/vul-db/pkg/utils"
-	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrc/bucket"
-	"github.com/khulnasoft-labs/vul-db/pkg/vulnsrc/vulnerability"
+	"github.com/khulnasoft-lab/vul-db/pkg/db"
+	"github.com/khulnasoft-lab/vul-db/pkg/types"
+	"github.com/khulnasoft-lab/vul-db/pkg/utils"
+	"github.com/khulnasoft-lab/vul-db/pkg/vulnsrc/bucket"
+	"github.com/khulnasoft-lab/vul-db/pkg/vulnsrc/vulnerability"
 	bolt "go.etcd.io/bbolt"
 	"golang.org/x/xerrors"
 )
