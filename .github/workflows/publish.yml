@@ -40,7 +40,7 @@ jobs:
 
       - name: Get the version
         id: docker_meta
-        uses: crazy-max/ghaction-docker-meta@v1
+        uses: crazy-max/ghaction-docker-meta@v4
         with:
           images: ${{ env.REP }}
           tag-semver: |
