@@ -21,6 +21,8 @@ github.com/khulnasoft-lab/boltdb-fixtures v0.0.0-20230813200610-ae47ede4f159 h1:
 github.com/khulnasoft-lab/boltdb-fixtures v0.0.0-20230813200610-ae47ede4f159/go.mod h1:ytu0df+DzcsM0zNU41D7RTad3uhFWygo2jq0qsMvrmI=
 github.com/khulnasoft-lab/boltdb-fixtures v0.0.0-20230813201612-49ff12220158 h1:BuNSbhAgVeaZwosd1lX/SdnWsxUPvAAkVwrl21koJF0=
 github.com/khulnasoft-lab/boltdb-fixtures v0.0.0-20230813201612-49ff12220158/go.mod h1:ytu0df+DzcsM0zNU41D7RTad3uhFWygo2jq0qsMvrmI=
+github.com/khulnasoft-lab/boltdb-fixtures v0.0.0-20230813205104-e4a570bb12b7 h1:NtPm/orcvtshh3VcdYOqQytKhBl0D/7ueahMs+VuxyA=
+github.com/khulnasoft-lab/boltdb-fixtures v0.0.0-20230813205104-e4a570bb12b7/go.mod h1:iyshYsxb4EftsT0xXoS4/CoYV68RtdVrK4xGcLbuNo0=
 github.com/khulnasoft-labs/boltdb-fixtures v0.0.0-20230802024017-3c3ec93cba21 h1:zBmX7xam32k9gFF2jq72Tm1rjFdwgTNyAYz4t8EgTnA=
 github.com/khulnasoft-labs/vul-db v0.0.0-20230813190315-d839f5532f51 h1:EhAOa8+RtDbKYvo6+T/3F+vT881Xmw5Polh0B4hKVB0=
 github.com/khulnasoft-labs/vul-db v0.0.0-20230813190315-d839f5532f51/go.mod h1:A/aiwsS5h4f81pEQR13hFgVzzChDLaBFiUY+qP96UCQ=
@@ -67,6 +69,8 @@ golang.org/x/sys v0.0.0-20200116001909-b77594299b42/go.mod h1:h1NjWce9XRLGQEsW7w
 golang.org/x/sys v0.0.0-20200223170610-d5e6a3e2c0ae/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.6.0 h1:MVltZSvRTcU2ljQOhs94SXPftV6DCNnZViHeQps87pQ=
 golang.org/x/sys v0.6.0/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
+golang.org/x/sys v0.11.0 h1:eG7RXZHdqOJ1i+0lgLgCpSXAp6M3LYlAo6osgSi0xOM=
+golang.org/x/sys v0.11.0/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
 golang.org/x/term v0.6.0 h1:clScbb1cHjoCkyRbWwBEUZ5H/tIFu5TAXIqaZD0Gcjw=
 golang.org/x/term v0.6.0/go.mod h1:m6U89DPEgQRMq3DNkDClhWw02AUbt2daBVO4cn4Hv9U=
 golang.org/x/text v0.12.0 h1:k+n5B8goJNdU7hSvEtMUz3d1Q6D/XW4COJSJR6fN0mc=
