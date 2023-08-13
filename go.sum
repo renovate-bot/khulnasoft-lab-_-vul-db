@@ -19,6 +19,8 @@ github.com/hashicorp/go-version v1.6.0 h1:feTTfFNnjP967rlCxM/I9g701jU+RN74YKx2mO
 github.com/hashicorp/go-version v1.6.0/go.mod h1:fltr4n8CU8Ke44wwGCBoEymUuxUHl09ZGVZPK5anwXA=
 github.com/khulnasoft-lab/boltdb-fixtures v0.0.0-20230813200610-ae47ede4f159 h1:PuFHHnqY/4ElHNBkqcVkpBJkI8vVVLdA4AbwAdGGpG8=
 github.com/khulnasoft-lab/boltdb-fixtures v0.0.0-20230813200610-ae47ede4f159/go.mod h1:ytu0df+DzcsM0zNU41D7RTad3uhFWygo2jq0qsMvrmI=
+github.com/khulnasoft-lab/boltdb-fixtures v0.0.0-20230813201612-49ff12220158 h1:BuNSbhAgVeaZwosd1lX/SdnWsxUPvAAkVwrl21koJF0=
+github.com/khulnasoft-lab/boltdb-fixtures v0.0.0-20230813201612-49ff12220158/go.mod h1:ytu0df+DzcsM0zNU41D7RTad3uhFWygo2jq0qsMvrmI=
 github.com/khulnasoft-labs/boltdb-fixtures v0.0.0-20230802024017-3c3ec93cba21 h1:zBmX7xam32k9gFF2jq72Tm1rjFdwgTNyAYz4t8EgTnA=
 github.com/khulnasoft-labs/vul-db v0.0.0-20230813190315-d839f5532f51 h1:EhAOa8+RtDbKYvo6+T/3F+vT881Xmw5Polh0B4hKVB0=
 github.com/khulnasoft-labs/vul-db v0.0.0-20230813190315-d839f5532f51/go.mod h1:A/aiwsS5h4f81pEQR13hFgVzzChDLaBFiUY+qP96UCQ=
