@@ -1,6 +1,6 @@
 FROM golang:1.17-alpine as builder
 
-ARG DB_TYPE=trivy
+ARG DB_TYPE=vul
 
 WORKDIR /build
 COPY . /build
@@ -11,4 +11,4 @@ RUN apk --no-cache add make gzip
 RUN DB_TYPE=${DB_TYPE} make db-all
 
 FROM scratch
-COPY --from=builder /build/assets/trivy*.db.gz .
+COPY --from=builder /build/assets/vul*.db.gz .

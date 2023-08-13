@@ -53,7 +53,7 @@ You can utilize `make db-all` to build the database, the DB artifact is outputte
 
 Alternatively Docker is supported, you can run `docker build . -t vul-db`.
 
-If you want to build a trivy integration test DB, please run `make create-test-db`
+If you want to build a vul integration test DB, please run `make create-test-db`
 
 ## Update interval
 Every 6 hours
@@ -62,19 +62,19 @@ Every 6 hours
 ### version 1 (deprecated)
 Vul DB v1 reached the end of support on February 2023. Please upgrade Vul to v0.23.0 or later.
 
-Read more about the Vul DB v1 deprecation in [the discussion](https://github.com/khulnasoft-lab/trivy/discussions/1653).
+Read more about the Vul DB v1 deprecation in [the discussion](https://github.com/khulnasoft-lab/vul/discussions/1653).
 
 ### version 2
 Vul DB v2 is hosted on [GHCR](https://github.com/orgs/khulnasoft-lab/packages/container/package/vul-db).
 Although GitHub displays the `docker pull` command by default, please note that it cannot be downloaded using `docker pull` as it is not a container image.
 
-You can download the actual compiled database via [Vul](https://khulnasoft-lab.github.io/trivy/) or [Oras CLI](https://oras.land/cli/).
+You can download the actual compiled database via [Vul](https://khulnasoft-lab.github.io/vul/) or [Oras CLI](https://oras.land/cli/).
 
 Vul:
 ```sh
 VUL_TEMP_DIR=$(mktemp -d)
-trivy --cache-dir $VUL_TEMP_DIR image --download-db-only
-tar -cf ./db.tar.gz -C $VUL_TEMP_DIR/db metadata.json trivy.db
+vul --cache-dir $VUL_TEMP_DIR image --download-db-only
+tar -cf ./db.tar.gz -C $VUL_TEMP_DIR/db metadata.json vul.db
 rm -rf $VUL_TEMP_DIR
 ```
 oras >= v0.13.0:
@@ -86,4 +86,4 @@ oras < v0.13.0:
 ```sh
 $ oras pull -a ghcr.io/khulnasoft-lab/vul-db:2
 ```
-The database can be used for [Air-Gapped Environment](https://khulnasoft-lab.github.io/trivy/latest/docs/advanced/air-gap/).
+The database can be used for [Air-Gapped Environment](https://khulnasoft-lab.github.io/vul/latest/docs/advanced/air-gap/).
