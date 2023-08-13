@@ -139,7 +139,7 @@ func (vs *VulnSrc) commit(tx *bolt.Tx, platformName string, errata []Erratum) er
 			}
 
 			// We need to work around this issue for now.
-			// https://github.com/aquasecurity/fanal/issues/186#issuecomment-931523102
+			// https://github.com/khulnasoft-lab/fanal/issues/186#issuecomment-931523102
 			advisories := map[string]types.Advisory{}
 
 			cveID := ref.ID
