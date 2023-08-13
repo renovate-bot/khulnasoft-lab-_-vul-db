@@ -5,7 +5,7 @@ on:
     - cron: '0 */12 * * *'
   workflow_dispatch:
 env:
-  ALIAS_DOCKER: w3security
+  ALIAS_DOCKER: khulnasoft
   REP: vul-db
 jobs:
   publish:

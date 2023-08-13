@@ -72,10 +72,10 @@ You can download the actual compiled database via [Vul](https://khulnasoft-labs.
 
 Vul:
 ```sh
-TRIVY_TEMP_DIR=$(mktemp -d)
-vul --cache-dir $TRIVY_TEMP_DIR image --download-db-only
-tar -cf ./db.tar.gz -C $TRIVY_TEMP_DIR/db metadata.json vul.db
-rm -rf $TRIVY_TEMP_DIR
+VUL_TEMP_DIR=$(mktemp -d)
+vul --cache-dir $VUL_TEMP_DIR image --download-db-only
+tar -cf ./db.tar.gz -C $VUL_TEMP_DIR/db metadata.json vul.db
+rm -rf $VUL_TEMP_DIR
 ```
 oras >= v0.13.0:
 ```sh
