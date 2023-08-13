@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/khulnasoft-labs/vul-db/pkg"
+	"github.com/khulnasoft-lab/vul-db/pkg"
 )
 
 var (

@@ -90,7 +90,7 @@ func Dir(cacheDir string) string {
 }
 
 func Path(cacheDir string) string {
-	dbPath := filepath.Join(Dir(cacheDir), "vul.db")
+	dbPath := filepath.Join(Dir(cacheDir), "trivy.db")
 	return dbPath
 }
 
