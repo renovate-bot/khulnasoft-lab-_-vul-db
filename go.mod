@@ -20,7 +20,7 @@ require (
 	k8s.io/utils v0.0.0-20201110183641-67b214c5f920
 )
 
-require github.com/khulnasoft-lab/boltdb-fixtures v0.0.0-20230813205104-e4a570bb12b7
+require github.com/khulnasoft-lab/boltdb-fixtures v1.0.0
 
 require (
 	github.com/cpuguy83/go-md2man/v2 v2.0.2 // indirect
