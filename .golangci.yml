@@ -24,9 +24,10 @@ linters-settings:
     sections:
       - standard
       - default
-      - prefix(github.com/khulnasoft-lab/)
+      - prefix(github.com/khulnasoft-lab)
       - blank
       - dot
+
   gomodguard:
     blocked:
       modules:
