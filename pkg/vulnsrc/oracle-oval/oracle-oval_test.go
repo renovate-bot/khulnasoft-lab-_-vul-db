@@ -5,11 +5,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/khulnasoft-lab/vul-db/pkg/vulnsrctest"
-
 	"github.com/khulnasoft-lab/vul-db/pkg/types"
 	"github.com/khulnasoft-lab/vul-db/pkg/utils"
 	"github.com/khulnasoft-lab/vul-db/pkg/vulnsrc/vulnerability"
+	"github.com/khulnasoft-lab/vul-db/pkg/vulnsrctest"
 )
 
 func TestMain(m *testing.M) {

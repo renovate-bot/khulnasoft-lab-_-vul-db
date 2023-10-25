@@ -9,17 +9,18 @@ import (
 	"strings"
 	"time"
 
-	"github.com/khulnasoft-lab/vul-db/pkg/types"
 	bolt "go.etcd.io/bbolt"
 	"golang.org/x/xerrors"
 
 	"github.com/khulnasoft-lab/vul-db/pkg/db"
+	"github.com/khulnasoft-lab/vul-db/pkg/types"
 	"github.com/khulnasoft-lab/vul-db/pkg/utils"
 	"github.com/khulnasoft-lab/vul-db/pkg/vulnsrc/vulnerability"
 )
 
 const (
-	nvdDir = "nvd"
+	vulnListDir = "vuln-list-nvd"
+	feedDir     = "feed"
 )
 
 type VulnSrc struct {
@@ -37,7 +38,7 @@ func (vs VulnSrc) Name() types.SourceID {
 }
 
 func (vs VulnSrc) Update(dir string) error {
-	rootDir := filepath.Join(dir, "vuln-list", nvdDir)
+	rootDir := filepath.Join(dir, vulnListDir, feedDir)
 
 	var items []Item
 	buffer := &bytes.Buffer{}

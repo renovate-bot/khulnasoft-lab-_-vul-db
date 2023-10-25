@@ -6,8 +6,6 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/khulnasoft-lab/vul-db/pkg/vulnsrctest"
-
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
@@ -17,6 +15,7 @@ import (
 	"github.com/khulnasoft-lab/vul-db/pkg/utils"
 	redhat "github.com/khulnasoft-lab/vul-db/pkg/vulnsrc/redhat-oval"
 	"github.com/khulnasoft-lab/vul-db/pkg/vulnsrc/vulnerability"
+	"github.com/khulnasoft-lab/vul-db/pkg/vulnsrctest"
 )
 
 func TestMain(m *testing.M) {

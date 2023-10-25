@@ -3,9 +3,9 @@ package strings_test
 import (
 	"testing"
 
-	"github.com/khulnasoft-lab/vul-db/pkg/utils/strings"
-
 	"github.com/stretchr/testify/assert"
+
+	"github.com/khulnasoft-lab/vul-db/pkg/utils/strings"
 )
 
 func TestUnique(t *testing.T) {

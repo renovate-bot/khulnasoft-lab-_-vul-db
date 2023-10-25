@@ -5,9 +5,9 @@ import (
 	"io"
 	"path/filepath"
 
-	"github.com/khulnasoft-lab/vul-db/pkg/utils"
-
 	"golang.org/x/xerrors"
+
+	"github.com/khulnasoft-lab/vul-db/pkg/utils"
 )
 
 func ParseDefinitions(dir string) ([]Definition, error) {

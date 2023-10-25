@@ -3,9 +3,9 @@ package ints_test
 import (
 	"testing"
 
-	"github.com/khulnasoft-lab/vul-db/pkg/utils/ints"
-
 	"github.com/stretchr/testify/assert"
+
+	"github.com/khulnasoft-lab/vul-db/pkg/utils/ints"
 )
 
 func TestHasIntersection(t *testing.T) {

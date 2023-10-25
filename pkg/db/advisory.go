@@ -3,9 +3,10 @@ package db
 import (
 	"encoding/json"
 
-	"github.com/khulnasoft-lab/vul-db/pkg/types"
 	bolt "go.etcd.io/bbolt"
 	"golang.org/x/xerrors"
+
+	"github.com/khulnasoft-lab/vul-db/pkg/types"
 )
 
 func (dbc Config) PutAdvisory(tx *bolt.Tx, bktNames []string, key string, advisory interface{}) error {

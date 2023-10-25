@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	version "github.com/knqyf263/go-rpm-version"
+	version "github.com/khulnasoft-lab/go-rpm-version"
 	bolt "go.etcd.io/bbolt"
 	"golang.org/x/xerrors"
 

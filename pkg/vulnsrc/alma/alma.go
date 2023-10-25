@@ -8,6 +8,7 @@ import (
 	"path/filepath"
 	"strings"
 
+	version "github.com/khulnasoft-lab/go-rpm-version"
 	bolt "go.etcd.io/bbolt"
 	"golang.org/x/xerrors"
 
@@ -15,7 +16,6 @@ import (
 	"github.com/khulnasoft-lab/vul-db/pkg/types"
 	"github.com/khulnasoft-lab/vul-db/pkg/utils"
 	"github.com/khulnasoft-lab/vul-db/pkg/vulnsrc/vulnerability"
-	version "github.com/knqyf263/go-rpm-version"
 )
 
 const (
