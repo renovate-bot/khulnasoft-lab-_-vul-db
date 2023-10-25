@@ -16,7 +16,7 @@ require (
 	github.com/masahiro331/go-mvn-version v0.0.0-20210429150710-d3157d602a08
 	github.com/samber/lo v1.38.1
 	github.com/stretchr/testify v1.8.4
-	github.com/urfave/cli v1.22.14
+	github.com/urfave/cli/v2 v2.25.7
 	go.etcd.io/bbolt v1.3.7
 	golang.org/x/exp v0.0.0-20231006140011-7918f672742d
 	golang.org/x/text v0.13.0
@@ -27,6 +27,7 @@ require (
 )
 
 require (
+	github.com/urfave/cli v1.22.14
 	gopkg.in/cheggaaa/pb.v1 v1.0.28
 	gopkg.in/yaml.v2 v2.4.0
 )
