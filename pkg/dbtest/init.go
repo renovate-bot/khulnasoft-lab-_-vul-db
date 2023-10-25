@@ -5,9 +5,10 @@ import (
 	"path/filepath"
 	"testing"
 
+	"github.com/stretchr/testify/require"
+
 	fixtures "github.com/khulnasoft-lab/boltdb-fixtures"
 	"github.com/khulnasoft-lab/vul-db/pkg/db"
-	"github.com/stretchr/testify/require"
 )
 
 func InitDB(t *testing.T, fixtureFiles []string) string {

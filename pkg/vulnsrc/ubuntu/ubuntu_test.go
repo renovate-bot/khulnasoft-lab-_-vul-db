@@ -3,11 +3,10 @@ package ubuntu_test
 import (
 	"testing"
 
-	"github.com/khulnasoft-lab/vul-db/pkg/vulnsrctest"
-
 	"github.com/khulnasoft-lab/vul-db/pkg/types"
 	"github.com/khulnasoft-lab/vul-db/pkg/vulnsrc/ubuntu"
 	"github.com/khulnasoft-lab/vul-db/pkg/vulnsrc/vulnerability"
+	"github.com/khulnasoft-lab/vul-db/pkg/vulnsrctest"
 )
 
 func TestVulnSrc_Update(t *testing.T) {

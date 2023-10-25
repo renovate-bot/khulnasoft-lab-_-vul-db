@@ -7,12 +7,13 @@ import (
 	"log"
 	"path/filepath"
 
+	bolt "go.etcd.io/bbolt"
+	"golang.org/x/xerrors"
+
 	"github.com/khulnasoft-lab/vul-db/pkg/db"
 	"github.com/khulnasoft-lab/vul-db/pkg/types"
 	"github.com/khulnasoft-lab/vul-db/pkg/utils"
 	"github.com/khulnasoft-lab/vul-db/pkg/vulnsrc/vulnerability"
-	bolt "go.etcd.io/bbolt"
-	"golang.org/x/xerrors"
 )
 
 const (
