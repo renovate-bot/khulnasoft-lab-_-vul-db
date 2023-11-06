@@ -7,7 +7,7 @@ require (
 	github.com/fatih/color v1.10.0 // indirect
 	github.com/goark/go-cvss v1.6.6
 	github.com/khulnasoft-lab/boltdb-fixtures v1.0.0
-	github.com/khulnasoft-lab/go-deb-version v0.0.0-20231008112102-b9979c743dca
+	github.com/khulnasoft-lab/go-deb-version v0.0.0-20231106220903-cfc740a3d549
 	github.com/khulnasoft-lab/go-gem-version v1.0.0
 	github.com/khulnasoft-lab/go-npm-version v1.0.0
 	github.com/khulnasoft-lab/go-pep440-version v1.0.0
