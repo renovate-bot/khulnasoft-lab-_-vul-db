@@ -11,7 +11,7 @@ require (
 	github.com/khulnasoft-lab/go-gem-version v1.0.0
 	github.com/khulnasoft-lab/go-npm-version v1.0.0
 	github.com/khulnasoft-lab/go-pep440-version v1.0.0
-	github.com/khulnasoft-lab/go-rpm-version v0.0.0-20231008111517-b1e9c56c569d
+	github.com/khulnasoft-lab/go-rpm-version v0.0.0-20231106221046-93d7f23756b1
 	github.com/khulnasoft-lab/goversion v1.0.1
 	github.com/masahiro331/go-mvn-version v0.0.0-20210429150710-d3157d602a08
 	github.com/samber/lo v1.38.1

@@ -35,6 +35,8 @@ github.com/khulnasoft-lab/go-pep440-version v1.0.0 h1:PsG5I/15YZPuDFLFYDjEMq5fbH
 github.com/khulnasoft-lab/go-pep440-version v1.0.0/go.mod h1:F26+oTpmHE4IlW4uYy8HQuEZ+5Bdo/Eh88BXgig3W08=
 github.com/khulnasoft-lab/go-rpm-version v0.0.0-20231008111517-b1e9c56c569d h1:/jGPSRGtv5RKKar5efc5k/t34DykOca7HNzmdLBtsx4=
 github.com/khulnasoft-lab/go-rpm-version v0.0.0-20231008111517-b1e9c56c569d/go.mod h1:2NOB/wyBqSRga11uxfYVDlHIMjWTs1I9tpWTveP6P54=
+github.com/khulnasoft-lab/go-rpm-version v0.0.0-20231106221046-93d7f23756b1 h1:N6pTZqYLBRrgelS9OadBmWL9VSGL4lOQfSlbHC66h8M=
+github.com/khulnasoft-lab/go-rpm-version v0.0.0-20231106221046-93d7f23756b1/go.mod h1:2NOB/wyBqSRga11uxfYVDlHIMjWTs1I9tpWTveP6P54=
 github.com/khulnasoft-lab/goversion v1.0.1 h1:RanzuyV3ctIoyD5nyw0jKS+/fdJTZLOz1bGJ7AuYrxs=
 github.com/khulnasoft-lab/goversion v1.0.1/go.mod h1:iXm1znzsGbrRSEC79WM5NHsSDJabotwY4FWy2Fsg3ms=
 github.com/kr/pretty v0.2.1 h1:Fmg33tUaq4/8ym9TJN1x7sLJnHVwhP33CNkpYV/7rwI=
