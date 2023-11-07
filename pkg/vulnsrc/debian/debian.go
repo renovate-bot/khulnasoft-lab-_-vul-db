@@ -9,10 +9,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	debver "github.com/khulnasoft-lab/go-deb-version"
 	bolt "go.etcd.io/bbolt"
 	"golang.org/x/xerrors"
 
+	debver "github.com/khulnasoft-lab/go-deb-version"
 	"github.com/khulnasoft-lab/vul-db/pkg/db"
 	"github.com/khulnasoft-lab/vul-db/pkg/types"
 	"github.com/khulnasoft-lab/vul-db/pkg/utils"

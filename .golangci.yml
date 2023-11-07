@@ -30,7 +30,7 @@ linters-settings:
   gomodguard:
     blocked:
       modules:
-        - github.com/hashicorp/go-version:
+        - github.com/hashicorp/goversion:
             recommendations:
               - github.com/khulnasoft-lab/goversion
             reason: "`khulnasoft-lab/goversion` is degisned for our use-cases"
