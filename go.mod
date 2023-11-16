@@ -9,7 +9,7 @@ require (
 	github.com/masahiro331/go-mvn-version v0.0.0-20210429150710-d3157d602a08
 	github.com/samber/lo v1.38.1
 	github.com/stretchr/testify v1.8.4
-	github.com/urfave/cli v1.22.14
+	github.com/urfave/cli/v2 v2.25.7
 	go.etcd.io/bbolt v1.3.8
 	golang.org/x/exp v0.0.0-20230522175609-2e198f4a06a1
 	golang.org/x/text v0.14.0
@@ -27,6 +27,7 @@ require (
 	github.com/khulnasoft-lab/go-pep440-version v1.0.0
 	github.com/khulnasoft-lab/go-rpm-version v0.0.0-20231107021420-631caefbb931
 	github.com/khulnasoft-lab/goversion v1.0.1
+	github.com/urfave/cli v1.22.14
 )
 
 require (
