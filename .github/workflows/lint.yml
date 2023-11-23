@@ -1,0 +1,34 @@
+---
+name: Make
+on:
+  workflow_dispatch:
+    inputs:
+      distro:
+        type: choice
+        description: Distro Image to Debug
+        required: true
+        options:
+          - build
+          - lint
+          - lintfix
+jobs:
+  build:
+    if: ${{ github.event.inputs.distro == 'build' }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Build the binary
+      run: make build
+  
+  lint:
+    if: ${{ github.event.inputs.distro == 'lint' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint
+        run: make lint
+
+  lintfix:
+    if: ${{ github.event.inputs.distro == 'lintfix' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lintfix
+        run: make lintfix
