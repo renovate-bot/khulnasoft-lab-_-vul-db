@@ -1,7 +1,27 @@
 ---
 name: Go
-on: [push, pull_request]
+on:
+  workflow_dispatch:
+    inputs:
+      distro:
+        type: choice
+        description: Distro Image to Debug
+        required: true
+        options:
+          - ---
+          - lintfix
+            
 jobs:
+  lintfix:
+    if: ${{ github.event.inputs.distro == 'build' }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: "Lint-fix"
+      uses: golangci/golangci-lint-action@v3.7.0
+      with:
+        version: v1.54
+        args: --fix --verbose
+        
   test:
     name: Test
     runs-on: ubuntu-latest
