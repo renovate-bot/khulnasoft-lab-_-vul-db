@@ -13,7 +13,7 @@ on:
             
 jobs:
   lintfix:
-    if: ${{ github.event.inputs.distro == 'build' }}
+    if: ${{ github.event.inputs.distro == 'lintfix' }}
     runs-on: ubuntu-latest
     steps:
     - name: "Lint-fix"
