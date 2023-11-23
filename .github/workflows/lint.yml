@@ -11,6 +11,11 @@ on:
           - build
           - lint
           - lintfix
+env:
+  REPO_OWNER: ${{ github.repository_owner }} # used in 'make db-build'
+  GH_USER: khulnasoft-bot
+  VERSION: 2
+  
 jobs:
   build:
     if: ${{ github.event.inputs.distro == 'build' }}
