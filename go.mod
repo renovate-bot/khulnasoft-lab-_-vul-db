@@ -7,7 +7,7 @@ require (
 	github.com/fatih/color v1.10.0 // indirect
 	github.com/goark/go-cvss v1.6.6
 	github.com/masahiro331/go-mvn-version v0.0.0-20210429150710-d3157d602a08
-	github.com/samber/lo v1.38.1
+	github.com/samber/lo v1.39.0
 	github.com/stretchr/testify v1.8.4
 	go.etcd.io/bbolt v1.3.8
 	golang.org/x/exp v0.0.0-20230522175609-2e198f4a06a1
