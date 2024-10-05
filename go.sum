@@ -34,6 +34,8 @@ github.com/khulnasoft-lab/go-pep440-version v1.0.0 h1:PsG5I/15YZPuDFLFYDjEMq5fbH
 github.com/khulnasoft-lab/go-pep440-version v1.0.0/go.mod h1:F26+oTpmHE4IlW4uYy8HQuEZ+5Bdo/Eh88BXgig3W08=
 github.com/khulnasoft-lab/go-rpm-version v0.0.0-20231107021420-631caefbb931 h1:lU24QbIPt6s3mmP3F7FbC551r29+yavRXroDUEMMyAg=
 github.com/khulnasoft-lab/go-rpm-version v0.0.0-20231107021420-631caefbb931/go.mod h1:2NOB/wyBqSRga11uxfYVDlHIMjWTs1I9tpWTveP6P54=
+github.com/khulnasoft-lab/go-rpm-version v0.0.0-20240520165911-f2dd2c239d90 h1:8LvBYQZViA+3vMaQOTn87cqdU78eDXsJ2+TVyuea4DQ=
+github.com/khulnasoft-lab/go-rpm-version v0.0.0-20240520165911-f2dd2c239d90/go.mod h1:2NOB/wyBqSRga11uxfYVDlHIMjWTs1I9tpWTveP6P54=
 github.com/khulnasoft-lab/goversion v1.0.1 h1:RanzuyV3ctIoyD5nyw0jKS+/fdJTZLOz1bGJ7AuYrxs=
 github.com/khulnasoft-lab/goversion v1.0.1/go.mod h1:iXm1znzsGbrRSEC79WM5NHsSDJabotwY4FWy2Fsg3ms=
 github.com/kr/pretty v0.2.1 h1:Fmg33tUaq4/8ym9TJN1x7sLJnHVwhP33CNkpYV/7rwI=
@@ -104,3 +106,5 @@ gopkg.in/yaml.v3 v3.0.1 h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA=
 gopkg.in/yaml.v3 v3.0.1/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
 k8s.io/utils v0.0.0-20231121161247-cf03d44ff3cf h1:iTzha1p7Fi83476ypNSz8nV9iR9932jIIs26F7gNLsU=
 k8s.io/utils v0.0.0-20231121161247-cf03d44ff3cf/go.mod h1:OLgZIPagt7ERELqWJFomSt595RzquPNLL48iOWgYOg0=
+k8s.io/utils v0.0.0-20240102154912-e7106e64919e h1:eQ/4ljkx21sObifjzXwlPKpdGLrCfRziVtos3ofG/sQ=
+k8s.io/utils v0.0.0-20240102154912-e7106e64919e/go.mod h1:OLgZIPagt7ERELqWJFomSt595RzquPNLL48iOWgYOg0=
