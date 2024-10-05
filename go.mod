@@ -22,7 +22,7 @@ require (
 
 require (
 	github.com/khulnasoft-lab/boltdb-fixtures v1.0.0
-	github.com/khulnasoft-lab/go-deb-version v0.0.0-20231106220903-cfc740a3d549
+	github.com/khulnasoft-lab/go-deb-version v0.0.0-20240520170140-87ae06920b2f
 	github.com/khulnasoft-lab/go-gem-version v1.0.0
 	github.com/khulnasoft-lab/go-npm-version v1.0.0
 	github.com/khulnasoft-lab/go-pep440-version v1.0.0
